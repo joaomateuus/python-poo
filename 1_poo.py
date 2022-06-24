@@ -21,8 +21,8 @@ class Pet(Animal):
 gato = Pet(tipo='gato', nome='Linux', raça='branco', alimento='ração', idade='6 meses', ecosistema='Terrestre')
 cachorro = Pet(tipo='cachorro', nome='Lola', raça='yorkshire', alimento='ração', idade='um ano e meio', ecosistema='Terrestre')
 
-print(gato)
-print(cachorro)
+print(gato, cachorro)
+
 
 class Mamimeferos(Animal):
     def __init__(self, nome, alimento, ecosistema, mamam, pelos):
@@ -33,3 +33,17 @@ class Mamimeferos(Animal):
         return f'{self.nome} {self.alimento} {self.ecosistema} {self.mamam} {self.pelos}'
 ornitorrinco = Mamimeferos(nome = 'Perry', alimento='?', mamam='Sim, mama na infancia', ecosistema='Aquatico/Terrestre', pelos='verde')
 print(ornitorrinco)
+
+class Herbivoros(Animal):
+    def __init__(self, nome, alimento, ecosistema, ingestao_adaptada, vegetariano):
+        super().__init__(nome, alimento, ecosistema)
+        self.ingestao_adaptada = ingestao_adaptada
+        self.vegetariano = vegetariano
+    
+    def __str__(self):
+        return f'{self.nome} {self.alimento} {self.ecosistema} {self.ingestao_adaptada} {self.vegetariano}'
+
+grilo = Herbivoros(nome='junin', alimento='folha', ecosistema='terrestre', ingestao_adaptada='Sim', vegetariano='SIM')
+tartaruga = Herbivoros(nome='tortoruga', alimento='folha', ecosistema='aquatico', ingestao_adaptada='Sim', vegetariano='SIM')
+
+print(grilo, tartaruga)
