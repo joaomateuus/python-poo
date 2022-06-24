@@ -26,5 +26,11 @@ print(gato)
 print(cachorro)
 
 class Invertebrados(Animal):
-    def __init__(self, nome, patas, alimento, ecosistema):
-        super().__init__(nome, patas, alimento, ecosistema)
+    def __init__(self, nome, alimento, ecosistema, patas, coluna):
+        super().__init__(nome, alimento, ecosistema, patas)
+        self.coluna = coluna
+    def __str__(self):
+        return f'{self.nome} {self.patas} {self.alimento} {self.ecosistema} {self.coluna}'
+minhoca = Invertebrados(nome='minhoco', patas=0,  alimento='residuos', ecosistema='terrestre', coluna='nao possui')
+
+print(minhoca)
