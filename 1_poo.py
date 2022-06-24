@@ -24,12 +24,12 @@ cachorro = Pet(tipo='cachorro', nome='Lola', raça='yorkshire', alimento='raçã
 print(gato)
 print(cachorro)
 
-class Invertebrados(Animal):
-    def __init__(self, nome, alimento, ecosistema, coluna):
+class Mamimeferos(Animal):
+    def __init__(self, nome, alimento, ecosistema, mamam, pelos):
         super().__init__(nome, alimento, ecosistema)
-        self.coluna = coluna
+        self.mamam = mamam
+        self.pelos = pelos
     def __str__(self):
-        return f'{self.nome} {self.alimento} {self.ecosistema} {self.coluna}'
-minhoca = Invertebrados(nome='minhoco', alimento='residuos', ecosistema='terrestre', coluna='nao possui')
-
-print(minhoca)
+        return f'{self.nome} {self.alimento} {self.ecosistema} {self.mamam} {self.pelos}'
+ornitorrinco = Mamimeferos(nome = 'Perry', alimento='?', mamam='Sim, mama na infancia', ecosistema='Aquatico/Terrestre', pelos='verde')
+print(ornitorrinco)
