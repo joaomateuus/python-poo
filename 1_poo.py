@@ -1,5 +1,5 @@
 class Animal():
-    def __init__(self, nome, patas, alimento, ecosistema ):
+    def __init__(self, nome, patas, alimento, ecosistema):
         self.nome = nome
         self.patas = patas
         self.alimento = alimento
@@ -8,6 +8,23 @@ class Animal():
     def __str__(self) -> str:
         return f'{self.nome} {self.patas} {self.alimento} {self.ecosistema}'
 
-cachorro = Animal(nome='Beto', patas=4, alimento='ração', ecosistema='terrestre')
 
+class Pet(Animal):
+    def __init__(self, nome, raça, patas, alimento, ecosistema, idade, tipo):
+        super().__init__(nome, patas, alimento, ecosistema)
+        self.idade = idade
+        self.raça = raça
+        self.tipo = tipo
+    
+    def __str__(self) -> str:
+        return f'Ola eu sou um {self.tipo} meu nome é {self.nome} eu tenho {self.patas} patas gosto muito de {self.alimento} e tenho {self.idade}'
+
+gato = Pet(tipo='gato', nome='Linux', raça='branco', patas=4, alimento='ração', idade='6 meses', ecosistema='Terrestre')
+cachorro = Pet(tipo='cachorro', nome='Lola', raça='yorkshire', patas=4, alimento='ração', idade='um ano e meio', ecosistema='Terrestre')
+
+print(gato)
 print(cachorro)
+
+class Invertebrados(Animal):
+    def __init__(self, nome, patas, alimento, ecosistema):
+        super().__init__(nome, patas, alimento, ecosistema)
